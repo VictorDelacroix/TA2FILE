@@ -26,7 +26,7 @@ namespace LibreriaProbar
         public void ArchivoStringEqual()
         {
             Probar objPrueba = new Probar();
-            string read = File.ReadAllText(@" C:\Users\vIN\.jenkins\workspace\TA2File\Prueba\Archivo.txt");
+            string read = File.ReadAllText(@" TA2File\Prueba\Archivo.txt");
             Assert.IsTrue(objPrueba.CompararIguales(read,"Hola"));
         }
         // Probando en Local
@@ -89,6 +89,29 @@ namespace LibreriaProbar
         {
             Probar objPrueba = new Probar();
             Assert.IsFalse(objPrueba.CompararIguales("Igual", "Igul"));
+        }
+
+        //Arreglos
+        [Test]
+        public void TestArregloEqual()
+        {
+            Probar objPrueba = new Probar();
+            List<int> a = new List<int>();
+            a.Add(10); a.Add(20); 
+            List<int> b = new List<int>();
+            b.Add(10); b.Add(20);
+            Assert.AreEqual(a, b);
+        }
+
+        [Test]
+        public void TestArregloNotEqual()
+        {
+            Probar objPrueba = new Probar();
+            List<int> a = new List<int>();
+            a.Add(15); a.Add(20);
+            List<int> b = new List<int>();
+            b.Add(10); b.Add(20);
+            Assert.AreEqual(a, b);
         }
     }
 }

@@ -29,5 +29,10 @@ namespace Prueba
         {
             if (a == b) return true; return false;
         }
+
+        public bool CompararArreglo(int[] a, int[] b)
+        {
+            if (a == b) return true; return false;
+        }
     }
 }
