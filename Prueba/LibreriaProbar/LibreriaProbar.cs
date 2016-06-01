@@ -17,7 +17,7 @@ namespace LibreriaProbar
         public void ArchivoStringEqual()
         {
             Probar objPrueba = new Probar();
-            string read = File.ReadAllText("Archivo.txt", Encoding.UTF8);
+            string read = File.ReadAllText(" @C:\Users\vIN\.jenkins\workspace\TA2File\Prueba\Archivo.txt", Encoding.UTF8);
             Assert.IsTrue(objPrueba.CompararIguales(read,"Hola"));
         }
         //Valores Iguales
