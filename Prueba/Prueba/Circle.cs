@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Prueba
 {
-    class Circle
+    public class Circle
     {
+
     }
 }

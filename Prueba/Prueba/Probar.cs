@@ -34,5 +34,10 @@ namespace Prueba
         {
             if (a == b) return true; return false;
         }
+
+        public int Dividir(int a, int b)
+        {
+                return a / b; 
+        }
     }
 }

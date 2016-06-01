@@ -23,11 +23,28 @@ namespace LibreriaProbar
         }
 
         [Test]
+        public void ArchivosIntNotEqual()
+        {
+            Probar objPrueba = new Probar();
+            string read = File.ReadAllText(@"C:\Users\vIN\.jenkins\workspace\TA2File\Prueba\Archivo.txt");
+            int b = Int32.Parse(read);
+            Assert.IsTrue(objPrueba.CompararNumeros(20, b));
+        }
+
+        [Test]
         public void ArchivoStringEqual()
         {
             Probar objPrueba = new Probar();
             string read = File.ReadAllText(@" TA2File\Prueba\Archivo.txt");
             Assert.IsTrue(objPrueba.CompararIguales(read,"Hola"));
+        }
+
+        [Test]
+        public void ArchivoStringNotEqual()
+        {
+            Probar objPrueba = new Probar();
+            string read = File.ReadAllText(@" TA2File\Prueba\Archivo.txt");
+            Assert.IsTrue(objPrueba.CompararIguales(read, "Hola"));
         }
         // Probando en Local
           [Test]
@@ -112,6 +129,23 @@ namespace LibreriaProbar
             List<int> b = new List<int>();
             b.Add(10); b.Add(20);
             Assert.AreEqual(a, b);
+        }
+
+        //Objeto
+        [Test]
+        public void TestObjetoEqual()
+        {
+            Circle objCircle = new Circle();
+            Circle objCirculo = new Circle();
+            Assert.AreEqual(objCircle, objCirculo);
+           
+        }
+        //Exception
+        [Test]
+        public void Exception()
+        {
+            Probar objProbar = new Probar();
+            // Falta hacer la prueba
         }
     }
 }
