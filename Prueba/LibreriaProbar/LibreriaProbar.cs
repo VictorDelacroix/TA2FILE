@@ -14,10 +14,27 @@ namespace LibreriaProbar
     {
         //Archivo
         [Test]
+        public void ArchivosIntEqual()
+        {
+            Probar objPrueba = new Probar();
+            string read = File.ReadAllText(@"C:\Users\vIN\.jenkins\workspace\TA2File\Prueba\Archivo.txt");
+            int b = Int32.Parse(read);
+            Assert.IsTrue(objPrueba.CompararNumeros(20,b));
+        }
+
+        [Test]
         public void ArchivoStringEqual()
         {
             Probar objPrueba = new Probar();
-            string read = File.ReadAllText(" @C:\Users\vIN\.jenkins\workspace\TA2File\Prueba\Archivo.txt", Encoding.UTF8);
+            string read = File.ReadAllText(@" C:\Users\vIN\.jenkins\workspace\TA2File\Prueba\Archivo.txt");
+            Assert.IsTrue(objPrueba.CompararIguales(read,"Hola"));
+        }
+        // Probando en Local
+          [Test]
+        public void ArchivoStringEqualLocal()
+        {
+            Probar objPrueba = new Probar();
+            string read = File.ReadAllText(@"C:\Users\vIN\Desktop\JenkinsIan\Prueba\Archivo.txt");
             Assert.IsTrue(objPrueba.CompararIguales(read,"Hola"));
         }
         //Valores Iguales

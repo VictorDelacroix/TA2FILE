@@ -24,5 +24,10 @@ namespace Prueba
             if (a == b) return true;
             return false;
         }
+
+        public bool CompararNumeros(int a, int b)
+        {
+            if (a == b) return true; return false;
+        }
     }
 }
