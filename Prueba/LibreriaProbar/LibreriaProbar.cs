@@ -136,9 +136,19 @@ namespace LibreriaProbar
         public void TestObjetoEqual()
         {
             Circle objCircle = new Circle();
+           
+            Assert.AreEqual(objCircle, objCircle);
+           
+        }
+
+        //Objeto
+        [Test]
+        public void TestObjetoNotEqual()
+        {
+            Circle objCircle = new Circle();
             Circle objCirculo = new Circle();
             Assert.AreEqual(objCircle, objCirculo);
-           
+
         }
         //Exception
         [Test]
